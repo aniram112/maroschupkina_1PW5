@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         )
         
         nav.navigationBar.titleTextAttributes = [
-            .foregroundColor: UIColor.black,
+            //.foregroundColor: UIColor.black,
             .font: UIFont(name: "HelveticaNeue-Bold", size: 22)!
         ]
         
