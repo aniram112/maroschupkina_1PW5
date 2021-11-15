@@ -18,7 +18,7 @@ class ArticleViewController: UIViewController{
         super.viewDidLoad()
         setupTableView()
         setupArticleManager()
-        view.backgroundColor = .magenta
+        view.backgroundColor = .white
         // Do any additional setup after loading the view.
     }
     
