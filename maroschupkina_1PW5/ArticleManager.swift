@@ -9,6 +9,7 @@ import UIKit
 protocol ArticleManagerObserver {
     func updateArticles()
 }
+
 class ArticleManager {
     var newsPage: Int = 2
     var observer: ArticleManagerObserver?

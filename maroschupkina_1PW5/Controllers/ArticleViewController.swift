@@ -52,8 +52,8 @@ class ArticleViewController: UIViewController{
 }
 extension ArticleViewController: ArticleManagerObserver {
     func updateArticles() {
-        DispatchQueue.main.sync { 
-            tableView.reloadData()
+        DispatchQueue.main.sync {
+            tableView?.reloadData()
         }
     }
 }
@@ -91,6 +91,31 @@ extension ArticleViewController: UITableViewDataSource {
         let webView = WebViewController()
         webView.url = articleManager.Articles[indexPath.row].articleUrl
         self.navigationController?.pushViewController(webView, animated: true)
+    }
+    
+    
+    private func share(article: ArticleModel?) {
+        let textToShare = article?.articleUrl?.absoluteString
+        
+        if let myWebsite = article?.articleUrl {
+            let objectsToShare = [textToShare, myWebsite] as [Any]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            
+            activityVC.popoverPresentationController?.sourceView = tableView
+            self.present(activityVC, animated: true, completion: nil)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .normal,
+                                        title: "share") { [weak self] (action, view, completionHandler) in
+            self?.share(article: self?.articleManager.Articles[indexPath.row])
+            completionHandler(true)
+        }
+        action.backgroundColor = .black
+        action.image = UIImage(systemName: "arrowshape.turn.up.right")
+        return UISwipeActionsConfiguration(actions: [action])
     }
 }
 
