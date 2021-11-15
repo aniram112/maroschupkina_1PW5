@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E17F1BE2742C50000EE350F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E17F1BD2742C50000EE350F /* WebViewController.swift */; };
 		7E27844F274164AE00B8C44D /* ArticlePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E27844E274164AE00B8C44D /* ArticlePage.swift */; };
 		7E40D9A4273A96A000B10E11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E40D9A3273A96A000B10E11 /* AppDelegate.swift */; };
 		7E40D9A6273A96A000B10E11 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E40D9A5273A96A000B10E11 /* SceneDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E17F1BD2742C50000EE350F /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		7E27844E274164AE00B8C44D /* ArticlePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlePage.swift; sourceTree = "<group>"; };
 		7E40D9A0273A96A000B10E11 /* maroschupkina_1PW5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = maroschupkina_1PW5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E40D9A3273A96A000B10E11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E17F1BF2742D9DD00EE350F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7E17F1BD2742C50000EE350F /* WebViewController.swift */,
+				7E40D9A7273A96A000B10E11 /* ArticleViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		7E40D997273A96A000B10E11 = {
 			isa = PBXGroup;
 			children = (
@@ -64,9 +75,9 @@
 		7E40D9A2273A96A000B10E11 /* maroschupkina_1PW5 */ = {
 			isa = PBXGroup;
 			children = (
+				7E17F1BF2742D9DD00EE350F /* Controllers */,
 				7E40D9A3273A96A000B10E11 /* AppDelegate.swift */,
 				7E40D9A5273A96A000B10E11 /* SceneDelegate.swift */,
-				7E40D9A7273A96A000B10E11 /* ArticleViewController.swift */,
 				7E40D9AC273A96A300B10E11 /* Assets.xcassets */,
 				7E40D9AE273A96A300B10E11 /* LaunchScreen.storyboard */,
 				7E40D9B1273A96A300B10E11 /* Info.plist */,
@@ -149,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E40D9C0273D589500B10E11 /* ArticleManager.swift in Sources */,
+				7E17F1BE2742C50000EE350F /* WebViewController.swift in Sources */,
 				7E40D9A8273A96A000B10E11 /* ArticleViewController.swift in Sources */,
 				7E40D9A4273A96A000B10E11 /* AppDelegate.swift in Sources */,
 				7E40D9BC273AA1E000B10E11 /* ArticleCell.swift in Sources */,

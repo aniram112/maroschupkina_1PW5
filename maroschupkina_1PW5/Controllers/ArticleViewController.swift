@@ -86,5 +86,11 @@ extension ArticleViewController: UITableViewDataSource {
             articleManager.loadMore()
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let webView = WebViewController()
+        webView.url = articleManager.Articles[indexPath.row].articleUrl
+        self.navigationController?.pushViewController(webView, animated: true)
+    }
 }
 
